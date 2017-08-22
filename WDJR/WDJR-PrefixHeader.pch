@@ -1,0 +1,67 @@
+//
+//  WDJR-PrefixHeader.pch
+//  WDJR
+//
+//  Created by fyaex001 on 2016/10/25.
+//  Copyright © 2016年 fyaex. All rights reserved.
+//
+
+#ifndef WDJR_PrefixHeader_pch
+#define WDJR_PrefixHeader_pch
+
+#define HEIGHT [UIScreen mainScreen].bounds.size.height
+#define WIDTH   [UIScreen mainScreen].bounds.size.width
+
+#define ershiFont  [UIFont systemFontOfSize:20]
+#define shibaFont  [UIFont systemFontOfSize:18]
+#define shiliuFont [UIFont systemFontOfSize:16]
+#define shisiFont  [UIFont systemFontOfSize:14]
+#define shisanFont  [UIFont systemFontOfSize:13]
+#define shierFont  [UIFont systemFontOfSize:12]
+
+
+
+
+ #define RGB(a,b,c) [UIColor colorWithRed:(a/255.0) green:(b/255.0) blue:(c/255.0) alpha:1.0]
+#define UIColorFromRGB(rgbValue)[UIColor colorWithRed:((float)((rgbValue&0xFF0000)>>16))/255.0 green:((float)((rgbValue&0xFF00)>>8))/255.0 blue:((float)(rgbValue&0xFF))/255.0 alpha:1.0]
+
+
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "AppAppearance.h"
+#import "Utility.h"
+#import "MessageTool.h"
+#import "UIImageView+AFNetworking.h"
+#import "SwitchViewController.h"
+#import "UIImage+ImageFromColor.h"
+#import "AppDataManager.h"
+#import "AppDelegate.h"
+#import "URLManager.h"
+#import "RequestManager.h"
+#import "BaseViewController.h"
+#import "TWLAlertView.h"
+#import "UIImageView+WebCache.h"
+#import "AFNetworking.h"
+#import "AFNetAPIClient.h"
+
+//#import "UserModel.h"
+//#import "MTLJSONAdapter.h"
+//#import "RealReachability.h"
+#endif
+
+
+typedef NS_ENUM(NSInteger, GestureType){
+    GestureTypeSetting     = 0, //设定
+    GestureTypeVerific     = 1, //校验
+    GestureTypeRest        = 2, //重置
+    GestureTypeOff         = 3, //关闭
+};
+
+
+
+
+
+
+#endif /* WDJR_PrefixHeader_pch */
